@@ -77,15 +77,8 @@ const Imprint = () => {
                   </a>
                   .<br />
                   Unsere E-Mail-Adresse finden Sie oben im Impressum.
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold mb-4">
-                  Verbraucherstreitbeilegung/Universalschlichtungsstelle
-                </h2>
-                <p className="leading-relaxed">
-                  Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+                  <br /><br />
+                  Wir sind weder bereit noch verpflichtet, an Streitbeilegungsverfahren vor einer
                   Verbraucherschlichtungsstelle teilzunehmen.
                 </p>
               </div>
