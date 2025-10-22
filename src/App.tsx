@@ -8,7 +8,6 @@ import { Footer } from "@/components/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
-import References from "./pages/References";
 import Contact from "./pages/Contact";
 import Imprint from "./pages/Imprint";
 import Terms from "./pages/Terms";
@@ -28,7 +27,6 @@ const App = () => (
           <Route path="/" element={<Home />} />
           <Route path="/leistungen" element={<Services />} />
           <Route path="/ueber-uns" element={<About />} />
-          <Route path="/referenzen" element={<References />} />
           <Route path="/kontakt" element={<Contact />} />
           <Route path="/impressum" element={<Imprint />} />
           <Route path="/agb" element={<Terms />} />

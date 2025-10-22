@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, MessageSquare, TrendingUp, Bot, Users, Award, Target } from "lucide-react";
+import { ArrowRight, MessageSquare, TrendingUp, Bot } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Home = () => {
@@ -23,11 +23,6 @@ const Home = () => {
     },
   ];
 
-  const stats = [
-    { icon: Users, value: "50+", label: "Erfolgreiche Projekte" },
-    { icon: Award, value: "15+", label: "Jahre Erfahrung" },
-    { icon: Target, value: "98%", label: "Zufriedenheitsrate" },
-  ];
 
   return (
     <div className="min-h-screen">
@@ -104,17 +99,25 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 gradient-primary">
+      {/* About Section */}
+      <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center text-primary-foreground">
-            {stats.map((stat, index) => (
-              <div key={index} className="space-y-4">
-                <stat.icon className="h-12 w-12 mx-auto text-accent" />
-                <div className="text-5xl font-bold">{stat.value}</div>
-                <div className="text-xl text-primary-foreground/80">{stat.label}</div>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Warum Scintilla Media?
+            </h2>
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              Mit langjähriger Erfahrung in der politischen Kommunikation bieten wir umfassende
+              Dienstleistungen für Institutionen und Politiker im konservativen Spektrum.
+              Von strategischer Beratung über Social Media Management bis hin zu innovativen
+              KI-gestützten Lösungen – wir sind Ihr Partner für erfolgreiche politische Kommunikation.
+            </p>
+            <Link to="/ueber-uns">
+              <Button variant="default" size="lg">
+                Mehr über uns erfahren
+                <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

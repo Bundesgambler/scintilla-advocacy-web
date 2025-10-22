@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -76,21 +76,10 @@ const Contact = () => {
                 <Mail className="h-8 w-8 text-accent mb-4" />
                 <h3 className="text-xl font-bold mb-2">E-Mail</h3>
                 <a
-                  href="mailto:info@scintilla-media.de"
+                  href="mailto:mh@scintilla-media.de"
                   className="text-muted-foreground hover:text-accent transition-smooth"
                 >
-                  info@scintilla-media.de
-                </a>
-              </Card>
-
-              <Card className="p-6 shadow-elegant">
-                <Phone className="h-8 w-8 text-accent mb-4" />
-                <h3 className="text-xl font-bold mb-2">Telefon</h3>
-                <a
-                  href="tel:+493012345678"
-                  className="text-muted-foreground hover:text-accent transition-smooth"
-                >
-                  +49 (0) 30 1234 5678
+                  mh@scintilla-media.de
                 </a>
               </Card>
 
@@ -100,19 +89,19 @@ const Contact = () => {
                 <p className="text-muted-foreground">
                   Scintilla Media UG
                   <br />
-                  Musterstraße 123
+                  Pappelallee 78-79
                   <br />
-                  10115 Berlin
+                  10437 Berlin
+                  <br />
+                  Deutschland
                 </p>
               </Card>
 
               <Card className="p-6 shadow-elegant border-2 border-accent/20">
-                <h3 className="text-xl font-bold mb-3">Bürozeiten</h3>
+                <h3 className="text-xl font-bold mb-3">Kontakt</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>Montag - Freitag</p>
-                  <p className="font-semibold text-foreground">09:00 - 18:00 Uhr</p>
-                  <p className="text-sm mt-4">
-                    Termine außerhalb der Bürozeiten nach Vereinbarung möglich.
+                  <p className="text-sm">
+                    Kontaktieren Sie uns per E-Mail für eine schnelle Antwort auf Ihre Anfrage.
                   </p>
                 </div>
               </Card>

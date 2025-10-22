@@ -18,23 +18,23 @@ const Imprint = () => {
                 <p className="leading-relaxed">
                   Scintilla Media UG (haftungsbeschränkt)
                   <br />
-                  Musterstraße 123
+                  Pappelallee 78-79
                   <br />
-                  10115 Berlin
+                  10437 Berlin
+                  <br />
+                  Deutschland
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold mb-4">Vertreten durch</h2>
-                <p className="leading-relaxed">Geschäftsführer: Max Mustermann</p>
+                <p className="leading-relaxed">Geschäftsführer: Mario Hau</p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold mb-4">Kontakt</h2>
                 <p className="leading-relaxed">
-                  Telefon: +49 (0) 30 1234 5678
-                  <br />
-                  E-Mail: info@scintilla-media.de
+                  E-Mail: mh@scintilla-media.de
                 </p>
               </div>
 
@@ -45,16 +45,7 @@ const Imprint = () => {
                   <br />
                   Registergericht: Amtsgericht Berlin-Charlottenburg
                   <br />
-                  Registernummer: HRB 123456 B
-                </p>
-              </div>
-
-              <div>
-                <h2 className="text-2xl font-bold mb-4">Umsatzsteuer-ID</h2>
-                <p className="leading-relaxed">
-                  Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz:
-                  <br />
-                  DE123456789
+                  Registernummer: HRB 261684
                 </p>
               </div>
 
@@ -63,11 +54,11 @@ const Imprint = () => {
                   Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
                 </h2>
                 <p className="leading-relaxed">
-                  Max Mustermann
+                  Mario Hau
                   <br />
-                  Musterstraße 123
+                  Pappelallee 78-79
                   <br />
-                  10115 Berlin
+                  10437 Berlin
                 </p>
               </div>
 

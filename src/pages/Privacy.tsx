@@ -108,14 +108,14 @@ const Privacy = () => {
                 <p className="leading-relaxed mb-4">
                   Scintilla Media UG (haftungsbeschränkt)
                   <br />
-                  Musterstraße 123
+                  Pappelallee 78-79
                   <br />
-                  10115 Berlin
+                  10437 Berlin
+                  <br />
+                  Deutschland
                 </p>
                 <p className="leading-relaxed mb-4">
-                  Telefon: +49 (0) 30 1234 5678
-                  <br />
-                  E-Mail: info@scintilla-media.de
+                  E-Mail: mh@scintilla-media.de
                 </p>
                 <p className="leading-relaxed">
                   Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder

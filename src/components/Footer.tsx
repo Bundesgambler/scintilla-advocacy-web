@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -33,11 +33,6 @@ export const Footer = () => {
               <li>
                 <Link to="/ueber-uns" className="text-sm text-primary-foreground/80 hover:text-accent transition-smooth">
                   Über uns
-                </Link>
-              </li>
-              <li>
-                <Link to="/referenzen" className="text-sm text-primary-foreground/80 hover:text-accent transition-smooth">
-                  Referenzen
                 </Link>
               </li>
               <li>
@@ -76,15 +71,11 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start space-x-2 text-sm text-primary-foreground/80">
                 <Mail className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <span>info@scintilla-media.de</span>
-              </li>
-              <li className="flex items-start space-x-2 text-sm text-primary-foreground/80">
-                <Phone className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <span>+49 (0) 30 1234 5678</span>
+                <span>mh@scintilla-media.de</span>
               </li>
               <li className="flex items-start space-x-2 text-sm text-primary-foreground/80">
                 <MapPin className="h-5 w-5 mt-0.5 flex-shrink-0" />
-                <span>Musterstraße 123<br />10115 Berlin</span>
+                <span>Pappelallee 78-79<br />10437 Berlin</span>
               </li>
             </ul>
           </div>

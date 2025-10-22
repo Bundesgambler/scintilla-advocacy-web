@@ -11,7 +11,6 @@ export const Navigation = () => {
     { name: "Startseite", path: "/" },
     { name: "Leistungen", path: "/leistungen" },
     { name: "Über uns", path: "/ueber-uns" },
-    { name: "Referenzen", path: "/referenzen" },
     { name: "Kontakt", path: "/kontakt" },
   ];
 
