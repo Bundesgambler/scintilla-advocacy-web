@@ -29,11 +29,11 @@ All colors MUST be HSL.
     --muted: 214 20% 95%;
     --muted-foreground: 216 15% 48%;
 
-    --accent: 38 88% 55%;
+    --accent: 216 80% 60%;
     --accent-foreground: 0 0% 100%;
     
-    --accent-light: 38 90% 65%;
-    --accent-dark: 38 85% 45%;
+    --accent-light: 216 85% 70%;
+    --accent-dark: 216 75% 50%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -45,11 +45,11 @@ All colors MUST be HSL.
     --radius: 0.75rem;
     
     --gradient-primary: linear-gradient(135deg, hsl(216 50% 16%), hsl(216 55% 25%));
-    --gradient-accent: linear-gradient(135deg, hsl(38 88% 55%), hsl(38 85% 45%));
+    --gradient-accent: linear-gradient(135deg, hsl(216 80% 60%), hsl(216 75% 50%));
     --gradient-hero: linear-gradient(180deg, hsl(216 50% 16%), hsl(216 45% 20%));
     
     --shadow-elegant: 0 10px 40px -10px hsl(216 50% 16% / 0.2);
-    --shadow-accent: 0 10px 30px -10px hsl(38 88% 55% / 0.3);
+    --shadow-accent: 0 10px 30px -10px hsl(216 80% 60% / 0.3);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -73,7 +73,7 @@ All colors MUST be HSL.
     --muted: 216 20% 20%;
     --muted-foreground: 214 15% 65%;
 
-    --accent: 38 88% 55%;
+    --accent: 216 80% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
