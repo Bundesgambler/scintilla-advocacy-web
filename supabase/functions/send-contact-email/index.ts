@@ -2,6 +2,7 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@2.0.0";
 
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const FROM_ADDRESS = "kontakt@scintilla-media.de";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -27,6 +28,8 @@ const handler = async (req: Request): Promise<Response> => {
     const { name, email, phone, subject, message }: ContactEmailRequest = await req.json();
 
     console.log("Received contact form submission from:", email);
+    console.log("Using FROM address:", FROM_ADDRESS);
+
 
     // Validate required fields
     if (!name || !email || !message) {
