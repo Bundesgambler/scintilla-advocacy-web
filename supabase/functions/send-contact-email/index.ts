@@ -81,12 +81,21 @@ const handler = async (req: Request): Promise<Response> => {
       `,
     });
 
+    if (userEmailResponse?.error) {
+      console.error('Resend user email error:', userEmailResponse.error);
+      return new Response(
+        JSON.stringify({ error: userEmailResponse.error.message, code: userEmailResponse.error.name }),
+        { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
     console.log("User confirmation email sent:", userEmailResponse);
 
     // Send notification email to company
     const notificationEmailResponse = await resend.emails.send({
       from: "Kontaktformular <kontakt@scintilla-media.de>",
       to: ["mh@scintilla-media.de"],
+      reply_to: email,
       subject: `Neue Kontaktanfrage: ${subject || 'Keine Betreffzeile'}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -110,6 +119,14 @@ const handler = async (req: Request): Promise<Response> => {
         </div>
       `,
     });
+
+    if (notificationEmailResponse?.error) {
+      console.error('Resend notification email error:', notificationEmailResponse.error);
+      return new Response(
+        JSON.stringify({ error: notificationEmailResponse.error.message, code: notificationEmailResponse.error.name }),
+        { status: 500, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
 
     console.log("Notification email sent to company:", notificationEmailResponse);
 
