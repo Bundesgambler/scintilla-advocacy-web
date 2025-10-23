@@ -53,7 +53,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send confirmation email to the user
     const userEmailResponse = await resend.emails.send({
-      from: "Scintilla Media <onboarding@resend.dev>",
+      from: "Scintilla Media <kontakt@scintilla-media.de>",
       to: [email],
       subject: "Ihre Kontaktanfrage bei Scintilla Media",
       html: `
@@ -85,7 +85,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send notification email to company
     const notificationEmailResponse = await resend.emails.send({
-      from: "Kontaktformular <onboarding@resend.dev>",
+      from: "Kontaktformular <kontakt@scintilla-media.de>",
       to: ["mh@scintilla-media.de"],
       subject: `Neue Kontaktanfrage: ${subject || 'Keine Betreffzeile'}`,
       html: `
