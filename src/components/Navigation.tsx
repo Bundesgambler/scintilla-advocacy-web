@@ -17,11 +17,11 @@ export const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-elegant">
+    <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50 shadow-elegant transition-smooth">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 gradient-accent rounded-lg flex items-center justify-center">
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 gradient-accent rounded-lg flex items-center justify-center group-hover:scale-110 transition-spring shadow-accent">
               <span className="text-2xl font-bold text-accent-foreground">S</span>
             </div>
             <span className="text-xl font-serif font-bold text-primary">
@@ -36,9 +36,12 @@ export const Navigation = () => {
                 <Button
                   variant={isActive(link.path) ? "default" : "ghost"}
                   size="sm"
-                  className="font-medium"
+                  className="font-medium relative group/link"
                 >
                   {link.name}
+                  {isActive(link.path) && (
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent rounded-full" />
+                  )}
                 </Button>
               </Link>
             ))}
@@ -46,7 +49,7 @@ export const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 hover:bg-muted rounded-lg transition-smooth"
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
@@ -60,13 +63,14 @@ export const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-2 border-t border-border">
-            {links.map((link) => (
+          <div className="md:hidden py-4 space-y-2 border-t border-border/50 animate-fade-in">
+            {links.map((link, index) => (
               <Link
                 key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className="block"
+                className="block animate-fade-in-up"
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <Button
                   variant={isActive(link.path) ? "default" : "ghost"}

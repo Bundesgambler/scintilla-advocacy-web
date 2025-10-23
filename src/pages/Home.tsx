@@ -33,30 +33,38 @@ const Home = () => {
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 gradient-hero opacity-90" />
+          <div className="absolute inset-0 gradient-mesh" />
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
             Politische Kommunikation
             <br />
-            <span className="text-accent">mit Wirkung</span>
+            <span className="text-gradient">mit Wirkung</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-primary-foreground/90 font-light">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-primary-foreground/90 font-light animate-fade-in-up delay-100">
             Professionelle Beratung für politische Institutionen und Politiker im konservativen Spektrum.
             Marketing, Social Media und KI-Expertise für erfolgreiche politische Kommunikation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-200">
             <Link to="/kontakt">
-              <Button variant="accent" size="lg" className="text-lg">
+              <Button variant="accent" size="lg" className="text-lg hover-glow">
                 Beratung anfragen
                 <ArrowRight className="ml-2" />
               </Button>
             </Link>
             <Link to="/leistungen">
-              <Button variant="outline" size="lg" className="text-lg border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button variant="outline" size="lg" className="text-lg glass border-2">
                 Unsere Leistungen
               </Button>
             </Link>
+          </div>
+        </div>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+          <div className="w-6 h-10 rounded-full border-2 border-primary-foreground/30 flex items-start justify-center p-2">
+            <div className="w-1 h-2 bg-primary-foreground/50 rounded-full animate-pulse" />
           </div>
         </div>
       </section>
@@ -77,9 +85,12 @@ const Home = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="p-8 hover:shadow-accent transition-smooth cursor-pointer border-2 hover:border-accent"
+                className="p-8 glass hover:shadow-glow transition-spring cursor-pointer border-2 border-border hover:border-accent group animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <service.icon className="h-12 w-12 text-accent mb-4" />
+                <div className="w-16 h-16 gradient-accent rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-spring">
+                  <service.icon className="h-8 w-8 text-accent-foreground" />
+                </div>
                 <h3 className="text-2xl font-bold mb-3">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {service.description}
@@ -123,18 +134,19 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <Card className="p-12 text-center shadow-elegant border-2 border-accent/20">
+      <section className="py-20 bg-background relative overflow-hidden">
+        <div className="absolute inset-0 gradient-mesh opacity-50" />
+        <div className="container mx-auto px-4 relative z-10">
+          <Card className="p-12 text-center shadow-xl glass border-2 border-accent/20 hover:border-accent transition-smooth">
             <h2 className="text-4xl font-bold mb-6">
-              Bereit für erfolgreiche politische Kommunikation?
+              Bereit für erfolgreiche <span className="text-gradient">politische Kommunikation</span>?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Kontaktieren Sie uns für ein unverbindliches Erstgespräch und erfahren Sie,
               wie wir Ihre politischen Ziele unterstützen können.
             </p>
             <Link to="/kontakt">
-              <Button variant="accent" size="lg" className="text-lg">
+              <Button variant="accent" size="lg" className="text-lg hover-glow">
                 Jetzt Kontakt aufnehmen
                 <ArrowRight className="ml-2" />
               </Button>

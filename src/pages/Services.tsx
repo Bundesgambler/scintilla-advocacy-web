@@ -107,23 +107,24 @@ const Services = () => {
             {mainServices.map((service, index) => (
               <Card
                 key={index}
-                className="p-8 md:p-12 shadow-elegant hover:shadow-accent transition-smooth border-2"
+                className="p-8 md:p-12 glass shadow-elegant hover:shadow-glow transition-spring border-2 group animate-fade-in-up"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="flex flex-col md:flex-row gap-8">
                   <div className="flex-shrink-0">
-                    <div className="w-20 h-20 gradient-accent rounded-2xl flex items-center justify-center">
+                    <div className="w-20 h-20 gradient-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-spring shadow-accent">
                       <service.icon className="h-10 w-10 text-accent-foreground" />
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-3xl font-bold mb-4">{service.title}</h2>
+                    <h2 className="text-3xl font-bold mb-4 group-hover:text-gradient transition-smooth">{service.title}</h2>
                     <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                       {service.description}
                     </p>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start">
-                          <ArrowRight className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0" />
+                        <li key={idx} className="flex items-start group/item">
+                          <ArrowRight className="h-5 w-5 text-accent mr-2 mt-0.5 flex-shrink-0 group-hover/item:translate-x-1 transition-smooth" />
                           <span className="text-foreground">{feature}</span>
                         </li>
                       ))}
@@ -144,10 +145,12 @@ const Services = () => {
             {additionalServices.map((service, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-accent transition-smooth cursor-pointer border-2 hover:border-accent bg-background"
+                className="p-6 glass hover:shadow-glow transition-spring cursor-pointer border-2 border-border hover:border-accent bg-background group"
               >
-                <service.icon className="h-10 w-10 text-accent mb-4" />
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <div className="w-12 h-12 gradient-accent rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-spring">
+                  <service.icon className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-gradient transition-smooth">{service.title}</h3>
                 <p className="text-muted-foreground">{service.description}</p>
               </Card>
             ))}

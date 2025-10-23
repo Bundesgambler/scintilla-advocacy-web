@@ -83,12 +83,13 @@ const About = () => {
             {values.map((value, index) => (
               <Card
                 key={index}
-                className="p-6 text-center hover:shadow-accent transition-smooth border-2 hover:border-accent bg-background"
+                className="p-6 text-center glass hover:shadow-glow transition-spring border-2 border-border hover:border-accent bg-background group animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-16 h-16 gradient-accent rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 gradient-accent rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-spring shadow-accent">
                   <value.icon className="h-8 w-8 text-accent-foreground" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{value.title}</h3>
+                <h3 className="text-xl font-bold mb-3 group-hover:text-gradient transition-smooth">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
               </Card>
             ))}

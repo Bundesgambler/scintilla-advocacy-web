@@ -100,8 +100,10 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Information */}
             <div className="space-y-6">
-              <Card className="p-6 shadow-elegant">
-                <Mail className="h-8 w-8 text-accent mb-4" />
+              <Card className="p-6 glass shadow-elegant hover:shadow-glow transition-spring border-2 border-border hover:border-accent group">
+                <div className="w-12 h-12 gradient-accent rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-spring">
+                  <Mail className="h-6 w-6 text-accent-foreground" />
+                </div>
                 <h3 className="text-xl font-bold mb-2">E-Mail</h3>
                 <a
                   href="mailto:mh@scintilla-media.de"
@@ -111,8 +113,10 @@ const Contact = () => {
                 </a>
               </Card>
 
-              <Card className="p-6 shadow-elegant">
-                <MapPin className="h-8 w-8 text-accent mb-4" />
+              <Card className="p-6 glass shadow-elegant hover:shadow-glow transition-spring border-2 border-border hover:border-accent group">
+                <div className="w-12 h-12 gradient-accent rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-spring">
+                  <MapPin className="h-6 w-6 text-accent-foreground" />
+                </div>
                 <h3 className="text-xl font-bold mb-2">Adresse</h3>
                 <p className="text-muted-foreground">
                   Scintilla Media UG
@@ -125,8 +129,8 @@ const Contact = () => {
                 </p>
               </Card>
 
-              <Card className="p-6 shadow-elegant border-2 border-accent/20">
-                <h3 className="text-xl font-bold mb-3">Kontakt</h3>
+              <Card className="p-6 glass shadow-xl border-2 border-accent/30 hover:border-accent transition-spring">
+                <h3 className="text-xl font-bold mb-3 text-gradient">Schneller Kontakt</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="text-sm">
                     Kontaktieren Sie uns per E-Mail für eine schnelle Antwort auf Ihre Anfrage.
@@ -137,8 +141,8 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <Card className="p-8 md:p-10 shadow-elegant">
-                <h2 className="text-3xl font-bold mb-6">Senden Sie uns eine Nachricht</h2>
+              <Card className="p-8 md:p-10 glass shadow-xl border-2 border-border hover:border-accent/50 transition-smooth">
+                <h2 className="text-3xl font-bold mb-6">Senden Sie uns eine <span className="text-gradient">Nachricht</span></h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
@@ -152,6 +156,7 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder="Ihr Name"
                         required
+                        className="focus:ring-accent focus:border-accent transition-smooth"
                       />
                     </div>
 
@@ -161,12 +166,13 @@ const Contact = () => {
                       </Label>
                       <Input
                         id="email"
-                        name="email"
+                        name="name"
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="ihre@email.de"
                         required
+                        className="focus:ring-accent focus:border-accent transition-smooth"
                       />
                     </div>
                   </div>
@@ -181,6 +187,7 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="+49 (0) 30 1234 5678"
+                        className="focus:ring-accent focus:border-accent transition-smooth"
                       />
                     </div>
 
@@ -192,6 +199,7 @@ const Contact = () => {
                         value={formData.subject}
                         onChange={handleChange}
                         placeholder="Ihr Anliegen"
+                        className="focus:ring-accent focus:border-accent transition-smooth"
                       />
                     </div>
                   </div>
@@ -208,6 +216,7 @@ const Contact = () => {
                       placeholder="Beschreiben Sie Ihr Anliegen..."
                       rows={6}
                       required
+                      className="focus:ring-accent focus:border-accent transition-smooth"
                     />
                   </div>
 
@@ -219,7 +228,7 @@ const Contact = () => {
                       type="submit"
                       variant="accent"
                       size="lg"
-                      className="w-full md:w-auto text-lg"
+                      className="w-full md:w-auto text-lg hover-glow"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? (
@@ -238,7 +247,7 @@ const Contact = () => {
 
                   <p className="text-sm text-muted-foreground mt-4">
                     Mit dem Absenden dieses Formulars stimmen Sie unserer{" "}
-                    <a href="/datenschutz" className="text-accent hover:underline">
+                    <a href="/datenschutz" className="text-accent hover:underline transition-smooth">
                       Datenschutzerklärung
                     </a>{" "}
                     zu.
