@@ -46,9 +46,9 @@ const Services = () => {
       description:
         "Innovative Lösungen durch künstliche Intelligenz für moderne politische Kommunikation. Nutzen Sie die neuesten Technologien für Ihren Erfolg.",
       features: [
-        "Datenanalyse und Sentiment-Tracking",
+        "Künstliche Intelligenz in der Öffentlichkeitsarbeit",
+        "Individuelle Einrichtung von KI Apps",
         "Automatisierte Content-Optimierung",
-        "Predictive Analytics für Kampagnen",
         "KI-gestützte Zielgruppenanalyse",
       ],
     },
